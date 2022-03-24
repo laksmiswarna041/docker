@@ -1,0 +1,10 @@
+version:2
+services:
+      db2:
+        image:mysql
+      my-php-site:
+        build: ./my-php-site
+        ports:
+          -8096:8080
+        link:
+          -db2
